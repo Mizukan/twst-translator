@@ -14,10 +14,8 @@
 
 ## 下载
 
-<!-- 待补充：把打包好的「Fairy Bell」zip 传上来（GitHub Release 或网盘），
-     然后把链接填在这里 -->
-
-- **最新版**：（下载地址待补充）
+- **GitHub**（推荐）：[Releases 页面](https://github.com/Mizukan/twst-translator/releases) —— 下载最新那个 `twst-translator.zip`
+- **夸克网盘**：[点这里](https://pan.quark.cn/s/e7c872dfdb60?pwd=khYh)　提取码 `khYh`（国内下载更快）
 - 系统要求：Windows 10 / 11（64 位）
 - 解压到任意目录，双击 `Fairy Bell.exe` 就能用（绿色版，不用安装）
 

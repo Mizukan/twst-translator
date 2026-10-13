@@ -11,22 +11,25 @@
 | `version.json` | 清单：每张表的版本、大小、sha256、更新日志（翻译器读的就是它） |
 | `tm_main.zip` / `tm_event.zip` / `tm_card.zip` / `tm.zip` | 译文包，一张表一个 |
 | `CHANGELOG.md` | 给人看的更新日志 |
-| `发布.py` | 发新版本用的脚本 |
+| `publish.py` / `first_setup.py` | 发布脚本 / 第一次设置脚本（分别由同名 bat 调用） |
 
 ## 怎么发一版新译文
 
 1. 把新的 csv 放进翻译器的 `data\` 目录（就是平时解包、翻译、替换那套）
-2. 跑发布脚本，`--note` 写这次改了什么（会显示给用户看）：
+2. **双击 `发布.bat`**，按提示写一句「这次更新了什么」，最后输入 `y` 上传。
+
+   > 不熟悉命令行就照 `怎么发布.md` 一步步来（那份是写给零基础看的）。
+   > 想用命令行也行，等价于：
 
 ```bat
 cd /d "G:\make ai great again\twst-translator-data"
-python 发布.py --note "活动表更新：新增活动「XXX」（1234 句）"
+python publish.py --note "活动表更新：新增活动「XXX」（1234 句）"
 ```
 
    脚本会逐张比对 sha256：**只有变了的才重新打包**，没变的沿用旧包和旧版本号，
    所以客户端不会白下十几 MB。清单和 `CHANGELOG.md` 会一起更新，
    顺便把本机 `data\_version.json` 记成最新。
-3. 推上去：
+3. 推上去（`发布.bat` 最后问你要不要上传，选 y 就替你做了）：
 
 ```bat
 git add -A && git commit -m "译文更新" && git push

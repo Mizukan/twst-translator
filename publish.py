@@ -1,10 +1,12 @@
 # -*- coding: utf-8 -*-
 """发布译文更新包（往这个仓库里塞新译文，推上去，装了翻译器的人就能更新到）
 
-用法：
-    python 发布.py --note "活动表更新：新增活动「XXX」（1234 句）"
-    python 发布.py --note "..." --data "另一个 data 目录"
-    python 发布.py --note "..." --push        # 顺手 git add/commit/push
+一般不用自己敲命令：双击「发布.bat」就行（它会跑 python publish.py --ask）。
+
+命令行用法：
+    python publish.py --note "活动表更新：新增活动「XXX」（1234 句）"
+    python publish.py --note "..." --data "另一个 data 目录"
+    python publish.py --note "..." --push        # 顺手 git add/commit/push
 
 做的事：
   1. 逐张比对新表和旧表的 sha256 —— 只有变了的才重新打包（没变的沿用旧包，
@@ -22,6 +24,7 @@ import subprocess
 import sys
 import zipfile
 
+sys.stdout.reconfigure(errors="replace")
 HERE = os.path.dirname(os.path.abspath(__file__))
 DEFAULT_DATA = r"G:\make ai great again\扭曲仙境翻译器\data"
 TABLES = ["tm_main.csv", "tm_event.csv", "tm_card.csv", "tm.csv"]
@@ -57,11 +60,21 @@ def main():
                     help="这次改了什么（可以给多条）")
     ap.add_argument("--ver", default="", help="版本号，默认用当前时间")
     ap.add_argument("--push", action="store_true", help="顺便 git 提交并推送")
+    ap.add_argument("--ask", action="store_true",
+                    help="交互式：问一句改了什么、要不要上传（发布.bat 用的）")
     a = ap.parse_args()
 
     if not os.path.isdir(a.data):
-        print("找不到目录：%s" % a.data)
+        print("找不到译文表目录：%s" % a.data)
+        print("（正常应该是 G:\\make ai great again\\扭曲仙境翻译器\\data）")
         return 2
+
+    notes = [n.strip() for n in a.note if n.strip()]
+    if a.ask and not notes:
+        print()
+        n = input("这次更新了什么？（一句话，会显示给用翻译器的人看）：").strip()
+        if n:
+            notes = [n]
 
     now = datetime.datetime.now()
     ver = a.ver.strip() or now.strftime("%Y-%m-%d %H:%M")
@@ -97,9 +110,7 @@ def main():
         print("一张表都没找到，什么都没做")
         return 1
 
-    # 清单里的更新日志（给翻译器显示）
     log = list(old.get("changelog") or [])
-    notes = [n.strip() for n in a.note if n.strip()]
     if not notes:
         notes = ["更新了：" + "、".join(changed)] if changed else ["重新发布"]
     for n in reversed(notes):
@@ -111,7 +122,6 @@ def main():
     with open(os.path.join(HERE, MANIFEST), "w", encoding="utf-8") as f:
         json.dump(manifest, f, ensure_ascii=False, indent=1)
 
-    # 人看的更新日志
     cl = os.path.join(HERE, "CHANGELOG.md")
     head = "# 更新日志\n\n"
     body = ""
@@ -123,7 +133,6 @@ def main():
     with open(cl, "w", encoding="utf-8") as f:
         f.write(head + body)
 
-    # 本机也记成最新，免得自己检查自己
     lv = os.path.join(a.data, "_version.json")
     try:
         old_lv = {}
@@ -135,24 +144,40 @@ def main():
     except Exception as e:
         print("（本地 _version.json 没写成：%s）" % e)
 
-    print("\n清单已更新：%s  版本 %s" % (MANIFEST, ver))
+    print()
+    print("清单已更新：%s   版本 %s" % (MANIFEST, ver))
     print("变动的表：%s" % ("、".join(changed) if changed else "（没有）"))
+
+    if a.ask and not a.push:
+        print()
+        y = input("现在就上传到 GitHub 吗？（输入 y 回车 = 上传）：").strip().lower()
+        a.push = (y == "y")
 
     if a.push:
         for cmd in (["git", "add", "-A"],
-                    ["git", "commit", "-m", "译文更新 %s：%s"
-                     % (ver, notes[0])],
+                    ["git", "commit", "-m", "译文更新 %s：%s" % (ver, notes[0])],
                     ["git", "push"]):
+            print()
             print(">>", " ".join(cmd))
             r = subprocess.run(cmd, cwd=HERE)
-            if r.returncode != 0 and cmd[1] != "commit":
-                print("这条命令没成功（%d），你自己看一眼" % r.returncode)
+            if r.returncode != 0:
+                if cmd[1] == "commit":
+                    print("（这里说 nothing to commit 是正常的：说明没有新内容）")
+                else:
+                    print("这条命令没成功，把上面的提示截图发我。")
+                    return 1
+        print()
+        print("-" * 62)
+        print("传上去了。等一两分钟（GitHub 有缓存），")
+        print("别人打开翻译器点「译文更新」就能拿到新内容。")
+        print("-" * 62)
     else:
-        print("\n接着执行：")
-        print('  cd /d "%s"' % HERE)
-        print("  git add -A && git commit -m \"译文更新 %s\" && git push" % ver)
+        print()
+        print("（没有上传。想上传就再跑一次，或者手动：")
+        print('   cd /d "%s"' % HERE)
+        print('   git add -A && git commit -m "译文更新" && git push )')
     return 0
 
 
 if __name__ == "__main__":
-    sys.exit(main())
+    sys.exit(main() or 0)

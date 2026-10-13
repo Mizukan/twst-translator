@@ -1,2 +1,10 @@
 *.tmp
 __pycache__/
+
+# 下面这些是本地发布用的工具，不传到 GitHub 上（它们住在隔壁
+# 「twst-translator-发布」目录里，仓库目录里不该出现）
+publish.py
+first_setup.py
+gitutil.py
+*.bat
+怎么发布.md

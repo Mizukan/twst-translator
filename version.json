@@ -1,0 +1,38 @@
+{
+ "format": 1,
+ "updated": "2026-10-14",
+ "ver": "2026-10-14 00:18",
+ "changelog": [
+  "2026-10-14 首次发布：主线 / 活动 / 卡面 三张机翻表 + 序章·第一章人工表"
+ ],
+ "files": {
+  "tm_main.csv": {
+   "ver": "2026-10-14 00:18",
+   "size": 9566138,
+   "sha256": "89e96b40fb76c3ea58f2f406fdd06d450979faa9031a6908dfbec0e8d79a4a98",
+   "zip": "tm_main.zip",
+   "zipsize": 2833649
+  },
+  "tm_event.csv": {
+   "ver": "2026-10-14 00:18",
+   "size": 15412553,
+   "sha256": "6a7bfc7b6da31c9732471c1552e1440902e0a382362603c83315ec8e559acdda",
+   "zip": "tm_event.zip",
+   "zipsize": 4449117
+  },
+  "tm_card.csv": {
+   "ver": "2026-10-14 00:18",
+   "size": 11034632,
+   "sha256": "94ea2786a816a8d2917a13457e06afba159db44671ae15175ac89d0b10c5b5bf",
+   "zip": "tm_card.zip",
+   "zipsize": 3286810
+  },
+  "tm.csv": {
+   "ver": "2026-10-14 00:18",
+   "size": 570242,
+   "sha256": "b900bd3b4b11f9dcfafb978dc9201035fff63004c21e36214219172215d4d00b",
+   "zip": "tm.zip",
+   "zipsize": 138154
+  }
+ }
+}

@@ -9,7 +9,7 @@
 | 文件 | 说明 |
 | --- | --- |
 | `version.json` | 清单：每张表的版本、大小、sha256、更新日志（翻译器读的就是它） |
-| `tm_main.zip` / `tm_event.zip` / `tm_card.zip` / `tm.zip` | 译文包，一张表一个 |
+| `tm_main.zip` / `tm_event.zip` / `tm_card.zip`  | 译文包，一张表一个 |
 | `CHANGELOG.md` | 给人看的更新日志 |
 | `publish.py` / `first_setup.py` | 发布脚本 / 第一次设置脚本（分别由同名 bat 调用） |
 

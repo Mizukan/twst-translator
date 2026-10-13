@@ -28,7 +28,7 @@ import gitutil
 
 sys.stdout.reconfigure(errors="replace")
 HERE = os.path.dirname(os.path.abspath(__file__))
-DEFAULT_DATA = r"G:\make ai great again\扭曲仙境翻译器\data"
+DEFAULT_DATA = r"G:\make ai great again\Fairy Bell\data"
 # 只管这三张（序章·第一章那张旧的 tm.csv 不再维护，也不进更新包）
 TABLES = ["tm_main.csv", "tm_event.csv", "tm_card.csv"]
 MANIFEST = "version.json"
@@ -69,7 +69,7 @@ def main():
 
     if not os.path.isdir(a.data):
         print("找不到译文表目录：%s" % a.data)
-        print("（正常应该是 G:\\make ai great again\\扭曲仙境翻译器\\data）")
+        print("（正常应该是 G:\\make ai great again\\Fairy Bell\\data）")
         return 2
 
     notes = [n.strip() for n in a.note if n.strip()]

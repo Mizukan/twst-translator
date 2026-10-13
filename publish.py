@@ -24,6 +24,8 @@ import subprocess
 import sys
 import zipfile
 
+import gitutil
+
 sys.stdout.reconfigure(errors="replace")
 HERE = os.path.dirname(os.path.abspath(__file__))
 DEFAULT_DATA = r"G:\make ai great again\扭曲仙境翻译器\data"
@@ -156,9 +158,12 @@ def main():
         a.push = (y == "y")
 
     if a.push:
-        for cmd in (["git", "add", "-A"],
-                    ["git", "commit", "-m", "译文更新 %s：%s" % (ver, notes[0])],
-                    ["git", "push"]):
+        GIT = gitutil.git_or_explain()
+        if not GIT:
+            return 1
+        for cmd in ([GIT, "add", "-A"],
+                    [GIT, "commit", "-m", "译文更新 %s：%s" % (ver, notes[0])],
+                    [GIT, "push"]):
             print()
             print(">>", " ".join(cmd))
             r = subprocess.run(cmd, cwd=HERE)

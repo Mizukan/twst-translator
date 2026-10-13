@@ -7,6 +7,8 @@ import os
 import subprocess
 import sys
 
+import gitutil
+
 sys.stdout.reconfigure(errors="replace")     # 万一有打不出来的符号也不崩
 HERE = os.path.dirname(os.path.abspath(__file__))
 REPO_URL = "https://github.com/Mizukan/twst-translator.git"
@@ -31,22 +33,26 @@ def main():
         return 1
 
     print()
+    GIT = gitutil.git_or_explain()
+    if not GIT:
+        return 1
+    print()
     print("正在连接仓库 ...")
-    subprocess.run(["git", "remote", "remove", "origin"], cwd=HERE,
+    subprocess.run([GIT, "remote", "remove", "origin"], cwd=HERE,
                    stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-    r = subprocess.run(["git", "remote", "add", "origin", REPO_URL], cwd=HERE)
+    r = subprocess.run([GIT, "remote", "add", "origin", REPO_URL], cwd=HERE)
     if r.returncode != 0:
         print()
         print("连接失败，把上面的提示截图发我看看。")
         return 1
-    subprocess.run(["git", "remote", "-v"], cwd=HERE)
+    subprocess.run([GIT, "remote", "-v"], cwd=HERE)
 
     print()
     print("现在开始上传。")
     print("如果弹出登录窗口：选 Sign in with your browser，")
     print("浏览器里登录 Mizukan 账号、点授权。这次之后就不用再登了。")
     print()
-    r = subprocess.run(["git", "push", "-u", "origin", "main"], cwd=HERE)
+    r = subprocess.run([GIT, "push", "-u", "origin", "main"], cwd=HERE)
     print()
     print("-" * 62)
     if r.returncode == 0:

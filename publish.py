@@ -27,7 +27,8 @@ import zipfile
 sys.stdout.reconfigure(errors="replace")
 HERE = os.path.dirname(os.path.abspath(__file__))
 DEFAULT_DATA = r"G:\make ai great again\扭曲仙境翻译器\data"
-TABLES = ["tm_main.csv", "tm_event.csv", "tm_card.csv", "tm.csv"]
+# 只管这三张（序章·第一章那张旧的 tm.csv 不再维护，也不进更新包）
+TABLES = ["tm_main.csv", "tm_event.csv", "tm_card.csv"]
 MANIFEST = "version.json"
 
 
@@ -138,6 +139,7 @@ def main():
         old_lv = {}
         if os.path.exists(lv):
             old_lv = json.load(open(lv, encoding="utf-8")).get("files") or {}
+        old_lv = {k: v for k, v in old_lv.items() if k in files}   # 不留已经不管的表
         old_lv.update({k: v["ver"] for k, v in files.items()})
         json.dump({"files": old_lv}, open(lv, "w", encoding="utf-8"),
                   ensure_ascii=False, indent=1)

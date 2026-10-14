@@ -88,6 +88,6 @@
 - ⭐ **给个 Star** —— 这是最实在的支持
 - 或者请我喝一杯（随缘就好）：
 
-![赞助码](assets/sponsor.jpg)
+<img src="assets/sponsor.jpg" width="420" alt="赞助码">
 
 > 谢谢支持，祝你永远神奇的一天 ✨

@@ -86,8 +86,9 @@
 如果你觉得有用：
 
 - ⭐ **给个 Star** —— 这是最实在的支持
+- 也欢迎来 [B 站](https://space.bilibili.com/469716) 找我
 - 或者请我喝一杯（随缘就好）：
 
-<img src="assets/sponsor.jpg" width="420" alt="赞助码">
+<img src="assets/sponsor.jpg" width="350" alt="赞助码">
 
 > 谢谢支持，祝你永远神奇的一天 ✨

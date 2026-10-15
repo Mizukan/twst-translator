@@ -17,7 +17,11 @@
 
 - **GitHub**（推荐）：[Releases 页面](https://github.com/Mizukan/twst-translator/releases) —— 下载最新那个 `twst-translator.zip`
 - **夸克网盘**：[点这里](https://pan.quark.cn/s/afa7093b703b?pwd=7Wvm)　提取码 `7Wvm`（国内下载更快）
-- **国内镜像（译文包）**：[码云 gitee.com/minasami/twst-translator](https://gitee.com/minasami/twst-translator) —— 程序里的「译文更新」会优先走这边，国内更快更稳
+- **码云 Gitee（国内推荐）**：[gitee.com/minasami/twst-translator](https://gitee.com/minasami/twst-translator/releases)　
+  译文包放在仓库里（程序里的「译文更新」会优先走这边，国内快很多）；
+  程序包在「发行版」里 —— 码云单个附件不能超过 100 MB，所以拆成了两个分卷，
+  把 `twst-translator.zip.001`、`twst-translator.zip.002`、`解压FairyBell.bat` 下到**同一个文件夹**，
+  双击 bat 就会自动合并解压（用 Windows 自带功能，不用装 7-Zip）
 - 系统要求：Windows 10 / 11（64 位）
 - 解压到任意目录，双击 `Fairy Bell.exe` 就能用（绿色版，不用安装）
 

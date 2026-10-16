@@ -15,7 +15,8 @@
 
 ## 下载
 
-- **GitHub**（推荐）：[Releases 页面](https://github.com/Mizukan/twst-translator/releases) —— 下载最新那个 `twst-translator.zip`
+- **GitHub**：[Releases 页面](https://github.com/Mizukan/twst-translator/releases) —— 下载最新那个 `twst-translator.zip`
+  （**GitHub 这边只放程序**，译文包只在码云那边）
 - **夸克网盘**：[点这里](https://pan.quark.cn/s/afa7093b703b?pwd=7Wvm)　提取码 `7Wvm`（国内下载更快）
 - **码云 Gitee（国内推荐）**：[gitee.com/minasami/twst-translator](https://gitee.com/minasami/twst-translator/releases)　
   译文包放在仓库里（程序里的「译文更新」会优先走这边，国内快很多）；
@@ -57,7 +58,7 @@
 
 ## 译文更新日志
 
-见 [CHANGELOG.md](CHANGELOG.md)。出新剧情之后我会把新译文发上来，
+见 [CHANGELOG.md](https://gitee.com/minasami/twst-translator/blob/main/CHANGELOG.md)。出新剧情之后我会把新译文发上来，
 你点一下程序里的 **译文更新** 就能拿到（只下载有变化的那张表，一般几 MB）。
 
 ## 常见问题

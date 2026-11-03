@@ -150,6 +150,9 @@ Fairy Bell 程序是**源码可见的免费软件，不是开源软件**。
 
 - 通知 QQ 群：**774517996**
 - B 站：<https://space.bilibili.com/469716>
-- 如果 Fairy Bell 帮到了你，可以在「设置 → 关于软件」里扫码支持作者。
+
+如果 Fairy Bell 帮到了你，可以扫码支持作者：
+
+<img src="assets/sponsor.jpg" width="175" alt="水無川寒的赞赏码">
 
 谢谢支持，祝你永远神奇的一天。

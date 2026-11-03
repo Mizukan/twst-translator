@@ -153,6 +153,6 @@ Fairy Bell 程序是**源码可见的免费软件，不是开源软件**。
 
 如果 Fairy Bell 帮到了你，可以扫码支持作者：
 
-<img src="assets/sponsor.jpg" width="175" alt="水無川寒的赞赏码">
+<img src="assets/sponsor.jpg" width="350" alt="水無川寒的赞赏码">
 
 谢谢支持，祝你永远神奇的一天。

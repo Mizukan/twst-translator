@@ -1,0 +1,106 @@
+FAIRY BELL SOURCE-AVAILABLE FREEWARE LICENSE
+Version 1.0
+
+Copyright (c) 2026 水無川寒 (Minasami). All rights reserved.
+
+This is a source-available freeware license, not an open-source license.
+The Software may not be described as "open source" without separate written
+permission from the copyright holder.
+
+1. SCOPE
+
+This License applies only to the Fairy Bell program code, compiled binaries,
+scripts, documentation, and original visual assets that are created by the
+copyright holder and included in the official Fairy Bell distribution,
+principally under the "tooldev" directory and the "源码（可选）" directory.
+
+This License does not apply to:
+
+- Third-party libraries, runtimes, models, fonts, or other materials;
+- Translation tables, terminology data, or other data files;
+- Disney, Aniplex, f4samurai, or other game-related text, artwork, trademarks,
+  or other game materials;
+- Any other product in the repository that carries a separate license or
+  notice.
+
+2. DEFINITIONS
+
+"Official distribution" means a complete, unmodified package distributed by
+the copyright holder or from an official download location identified by the
+copyright holder.
+
+"Software" means the Fairy Bell materials covered by Section 1.
+
+3. GRANTED RIGHTS
+
+Subject to this License, you are permitted to:
+
+a. Download and install the Software;
+b. Run and use the Software free of charge for personal, non-commercial use;
+c. Make reasonable backup copies;
+d. Read and study the source code provided in the official distribution;
+e. Modify the source code solely for your own private personal use, provided
+   the modified version is not distributed or made available to others;
+f. Redistribute the complete, unmodified official distribution free of charge,
+   provided that this License and all copyright and third-party notices remain
+   intact and the distribution is not presented as your own product;
+g. Record, stream, or publish videos showing your use of the Software,
+   including ordinary platform advertising or creator-program revenue.
+
+4. RESTRICTIONS
+
+You may not:
+
+a. Sell, rent, sublicense, or charge for access to the Software;
+b. Include the Software in a paid product, paid service, paid bundle, or
+   paywalled download;
+c. Distribute modified source code, modified binaries, or a repackaged
+   derivative distribution of the Software;
+d. Remove, hide, or alter copyright, license, attribution, or third-party
+   notices;
+e. Use the names "Fairy Bell", "Minasami", or "水無川寒" in a way that suggests
+   the copyright holder endorses or authorizes your version;
+f. Distribute game materials, translations, or other content that you do not
+   have the right to distribute.
+
+5. TRANSLATIONS AND GAME MATERIALS
+
+Translation tables, terminology data, and other user-provided or game-derived
+data are separate materials and are not licensed to you by this License.
+Nothing in this License grants any right to copy, publish, sell, or otherwise
+use Disney, Aniplex, f4samurai, or other third-party text, artwork, characters,
+trademarks, or game assets.
+
+6. THIRD-PARTY MATERIALS
+
+Third-party components included with the Software remain governed by their own
+licenses. In the event of a conflict between this License and a third-party
+license, the third-party license governs that third-party component. See
+THIRD_PARTY_NOTICES.md for the principal components and notices.
+
+7. NO TRADEMARK LICENSE
+
+This License does not grant permission to use any trade name, trademark,
+service mark, logo, or product name, except for factual, nominative references
+needed to describe the origin of the Software.
+
+8. TERMINATION
+
+Your rights under this License terminate automatically if you materially
+breach any term of this License. Upon termination, you must stop using and
+distributing the Software. This does not limit any rights or remedies that the
+copyright holder may have under applicable law.
+
+9. NO WARRANTY
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. THE COPYRIGHT HOLDER
+IS NOT LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY ARISING FROM THE USE
+OF THE SOFTWARE.
+
+10. ENTIRE AGREEMENT
+
+This License states the complete permission granted by the copyright holder
+for the Software covered by Section 1. Any additional permission must be given
+in writing by the copyright holder.

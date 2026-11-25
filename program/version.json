@@ -1,0 +1,83 @@
+{
+ "format": 1,
+ "version": "2.1.1",
+ "published": "2026-11-25 19:32",
+ "notes": [
+  "启动时自动检查程序新版本，发现后在快捷栏提示",
+  "文件级增量更新：2.1 → 2.1.1 约 9 MB，校验 SHA-256、备份旧文件并自动重启",
+  "修复更新源不可用时 curl 兜底下载反复闪出 cmd 窗口",
+  "码云清单不可达时自动改用 GitHub 清单兜底",
+  "v2.1 旧版第一次升级到 2.1.1 仍需下载完整程序包"
+ ],
+ "full": {
+  "name": "twst-translator.zip",
+  "size": 180636564,
+  "sha256": "4e7a907b378ec9da0ab2e7e6510bde655406cae011bb63bf4045591d72e7a0ec",
+  "url": "https://github.com/Mizukan/twst-translator/releases/download/v2.1.1/twst-translator.zip"
+ },
+ "patches": {
+  "2.1": {
+   "url": "https://gitee.com/minasami/twst-translator/releases/download/v2.1.1/patch_2.1_to_2.1.1.zip",
+   "size": 9435006,
+   "sha256": "1132d293e126404c668c788b2c71d4e9c1a121b40e94a4240699d2435a96cded",
+   "files": [
+    {
+     "path": "Fairy Bell.exe",
+     "size": 9253186,
+     "sha256": "09b294008709ef241a99e09d01e28acb1049cb50a610ba484da3ac3965998e10"
+    },
+    {
+     "path": "_internal/base_library.zip",
+     "size": 1332808,
+     "sha256": "482b55192e29be0128aebd426002dcf39b25d6743e7276eaa14d239b0459220b"
+    },
+    {
+     "path": "_internal/cv2/data/__init__.py",
+     "size": 73,
+     "sha256": "f4ce16721ed7f623a4dcc443ba600d1856db610cb2c3d53c13a8ca028cc68f6d"
+    },
+    {
+     "path": "使用说明.md",
+     "size": 27361,
+     "sha256": "383e3be6a895dbb2213d2dc5ec71dd507d90de6da0f9a750c633295ec5ae59a1"
+    },
+    {
+     "path": "源码（可选）/build_tr.bat",
+     "size": 2677,
+     "sha256": "bbbfbdd5b851b6b6a3d5bac8ab2bd3554b55cb3991e0872eafceba96fdeb32bd"
+    },
+    {
+     "path": "源码（可选）/tr_app.py",
+     "size": 91420,
+     "sha256": "e307a2129eb41bd17c169acb3593bb741d7f5f7bb79cd58a0347dc07b328e0dc"
+    },
+    {
+     "path": "源码（可选）/tr_compact.py",
+     "size": 6465,
+     "sha256": "13de92f36c27ed59cee74b8b7253ad931f170dfe979fe443d2a7bec55f8a2052"
+    },
+    {
+     "path": "源码（可选）/tr_program_update.py",
+     "size": 6871,
+     "sha256": "c46039dc44e57a58f1cf334d2fa192d0181ed3555a353b4138dec7e61aabef3e"
+    },
+    {
+     "path": "源码（可选）/tr_update.py",
+     "size": 15041,
+     "sha256": "b9a2b2b26415c31d778a4e635116a024cd9964187986cb457b1e49ef74edc2be"
+    },
+    {
+     "path": "源码（可选）/tr_updater.py",
+     "size": 9063,
+     "sha256": "a672281f464c552531ca3431faea8dc1b2477d3121c78893fd47e6501c745175"
+    },
+    {
+     "path": "源码（可选）/使用说明.md",
+     "size": 27361,
+     "sha256": "383e3be6a895dbb2213d2dc5ec71dd507d90de6da0f9a750c633295ec5ae59a1"
+    }
+   ],
+   "delete": []
+  }
+ }
+}

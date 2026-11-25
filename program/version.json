@@ -1,35 +1,35 @@
 {
  "format": 1,
  "version": "2.1.1",
- "published": "2026-11-25 19:32",
+ "published": "2026-11-25 19:42",
  "notes": [
   "启动时自动检查程序新版本，发现后在快捷栏提示",
   "文件级增量更新：2.1 → 2.1.1 约 9 MB，校验 SHA-256、备份旧文件并自动重启",
   "修复更新源不可用时 curl 兜底下载反复闪出 cmd 窗口",
-  "码云清单不可达时自动改用 GitHub 清单兜底",
+  "码云清单不可达时快速切换 GitHub 清单兜底",
   "v2.1 旧版第一次升级到 2.1.1 仍需下载完整程序包"
  ],
  "full": {
   "name": "twst-translator.zip",
-  "size": 180636564,
-  "sha256": "4e7a907b378ec9da0ab2e7e6510bde655406cae011bb63bf4045591d72e7a0ec",
+  "size": 180640363,
+  "sha256": "2009d976a1f3a87da90c26f57033473d0d57af161b977d363489c3751d96550e",
   "url": "https://github.com/Mizukan/twst-translator/releases/download/v2.1.1/twst-translator.zip"
  },
  "patches": {
   "2.1": {
    "url": "https://gitee.com/minasami/twst-translator/releases/download/v2.1.1/patch_2.1_to_2.1.1.zip",
-   "size": 9435006,
-   "sha256": "1132d293e126404c668c788b2c71d4e9c1a121b40e94a4240699d2435a96cded",
+   "size": 9436241,
+   "sha256": "9e9f6d490aa1ce6efb87daeeb5fe8bcfa8b52c3f6415e4382649b4f954adc622",
    "files": [
     {
      "path": "Fairy Bell.exe",
-     "size": 9253186,
-     "sha256": "09b294008709ef241a99e09d01e28acb1049cb50a610ba484da3ac3965998e10"
+     "size": 9253290,
+     "sha256": "2a17e64154ba15e09610d7960833a302b9388bb8012d36833b9df59dc529dde1"
     },
     {
      "path": "_internal/base_library.zip",
      "size": 1332808,
-     "sha256": "482b55192e29be0128aebd426002dcf39b25d6743e7276eaa14d239b0459220b"
+     "sha256": "502aaaa01ef2044e58905ea451035f731760cd189dfe67b7f51ba6e5f0d4d5bc"
     },
     {
      "path": "_internal/cv2/data/__init__.py",
@@ -58,8 +58,8 @@
     },
     {
      "path": "源码（可选）/tr_program_update.py",
-     "size": 6871,
-     "sha256": "c46039dc44e57a58f1cf334d2fa192d0181ed3555a353b4138dec7e61aabef3e"
+     "size": 7401,
+     "sha256": "2b2ce4879d52ab15aeec89cf9c1e58c280207d73fc19096ee64328963dadb617"
     },
     {
      "path": "源码（可选）/tr_update.py",
